@@ -1,18 +1,18 @@
 # use-csrf
-A React hook that retrieves a Rails CSRF token from the DOM
 
+A React hook that retrieves a Rails CSRF token from the DOM
 
 ## Usage
 
 ```
 import React, { useEffect, useState } from 'react';
-import { useCsrf } from 'use-csrf';
+import useCsrfToken from 'use-csrf/useCsrfToken';
 import { performOperation } from 'utils';
 
 const Page = () => {
   const [content, setContent] = useState(null);
 
-  const token = useCsrf();
+  const token = useCsrfToken();
 
   useEffect(() => {
     const fetchData = async () => {
